@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "sst-medium";
+  src: url("../fonts/SSTArabic-Medium.eot");
+  src: url("../fonts/SSTArabic-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/SSTArabic-Medium.woff2") format("woff2"),
+    url("../fonts/SSTArabic-Medium.woff") format("woff"),
+    url("../fonts/SSTArabic-Medium.ttf") format("truetype"),
+    url("../fonts/SSTArabic-Medium.svg#SSTArabic-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "careem-regular";
+  src: url("../fonts/Careem-Regular.eot");
+  src: url("../fonts/Careem-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Careem-Regular.woff2") format("woff2"),
+    url("../fonts/Careem-Regular.woff") format("woff"),
+    url("../fonts/Careem-Regular.ttf") format("truetype"),
+    url("../fonts/Careem-Regular.svg#Careem-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "careem-bold";
+  src: url("../fonts/Careem-Bold.eot");
+  src: url("../fonts/Careem-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Careem-Bold.woff2") format("woff2"),
+    url("../fonts/Careem-Bold.woff") format("woff"),
+    url("../fonts/Careem-Bold.ttf") format("truetype"),
+    url("../fonts/Careem-Bold.svg#Careem-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer utilities {
+  .seperator {
+    @apply px-5 border-t border-gray-50 border-opacity-10 my-5;
+  }
+
+  .msg:nth-child(2n) {
+    @apply bg-primary-lighter bg-opacity-60 rounded-3xl;
+  }
+  .vc-popover-content-wrapper {
+    @apply z-100;
+  }
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #dbe4eb !important;
+  }
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #2962fb !important;
+    width: 12px;
+    height: 12px;
+  }
+
+  input:checked + div {
+    @apply border-primary;
+  }
+  input:checked + div svg {
+    @apply block;
+  }
+
+  .multiselect-tags-search {
+    @apply border-0 focus:border-0 focus:outline-none focus:ring-transparent;
+  }
+  :root {
+    --ms-tag-bg: #333740;
+    --ms-tag-color: #f2f5f9;
+    --ms-tag-radius: 0.5rem;
+    --ms-tag-font-weight: 400;
+    --ms-tag-font-size: 1.125rem;
+    --ms-dropdown-bg: #1c1d21;
+    -ms-tag-py: 0.25rem;
+    --ms-tag-px: 1rem;
+  }
+  .multiselect-caret {
+    width: 1rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  .vti__dropdown.open,
+  .vti__dropdown:hover,
+  .vti__dropdown-list {
+    background-color: #1c1d21 !important;
+  }
+  .vti__dropdown-item.highlighted,
+  .vti__dropdown-item:hover {
+    background-color: #26272b !important;
+  }
+  .vue-tel-input:focus-within ~ input,
+  .vue-tel-input input:focus {
+    @apply outline-none border-0 ring-0;
+  }
+  .vue-tel-input:focus-within {
+    @apply ring-primary border-primary;
+  }
+  .custom-filter {
+    backdrop-filter: blur(24px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
